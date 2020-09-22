@@ -1,0 +1,173 @@
+body {
+    margin: 0;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+    "rotate"
+    "scale"
+    "translate"
+    ;
+  }
+  .rotate {
+    grid-area: rotate;
+    text-align: center;
+  }
+  .rotate img {
+    transform: rotate(180deg);
+  }
+  .scale {
+    grid-area: scale;
+    justify-content: center;
+    display: grid;
+    align-items: center;
+  }
+  .scaleMe {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    margin: 0 auto;
+    transform: scale(3)
+    /* Write the scale transform here */
+  
+  }
+  .translate {
+    grid-area: translate;
+    justify-content: center;
+    display: grid;
+    align-items: center;
+  }
+  .moveMe {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    transform: translateX(90%) translateY(20%);
+
+  }
+  
+  .gridChild {
+    background-color: lightgrey;
+    border: 1px solid lightblue;
+    margin: 15px 0px;
+  }
+
+  .bounceMe {
+    animation:  bounceArrow .7s infinite;
+  
+  }
+  .spinMe { 
+        animation: spin 2s infinite
+  
+  }
+  #progressbar {
+    background-color: black;
+    border-radius: 5px;
+    margin-top: 61px;
+    padding: 3px;
+
+  }
+  #progressbar > .orangeBar {
+    background-color: red;
+    width: 40%;
+    height: 20px;
+    border-radius: 5px;
+    animation: loadBar 4s;
+    animation-fill-mode: forward;
+  }
+  .movingBox {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    transform: translate3d(0px, 0px,0px);
+  
+  }
+  
+  
+  @keyframes bounceArrow {
+    from {
+        margin-top: 0px;
+
+  
+    }
+    50% {
+        margin: 7px;
+  
+    }
+    to {
+  
+    }
+  }
+  
+  @keyframes spin {
+    from {
+        transform: rotate(180deg);
+    
+  
+    }
+    to {
+        transform: rotate(-180deg);
+    }
+  }
+  
+  @keyframes loadBar {
+    from {
+        width: 40%;
+  
+    }
+    to {
+        width: 100%;
+  
+    }
+  }
+  
+  @keyframes movingBox {
+    from {
+        transform: translate 3d(100px, 0px, 0px);
+    
+    }
+    25% {
+        transform: translate 3d(50px, 300px, 0px);
+    }
+    50% {
+        transform: translate 3d(200px, 100px, 0px);
+    }
+    75% {
+        transform: translate 3d(0px, 0px, 0px);
+    }
+    to {
+  
+    }
+  }
+  
+  
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "arrow preload"
+    "loadingBar loadingBar"
+    "boxMove boxMove"
+    ;
+  }
+  .gridChild {
+    margin: 15px;
+    padding: 15px;
+    height: 200px;
+  }
+  .arrow {
+    grid-area: arrow;
+    text-align: center;
+  }
+  .preload {
+    grid-area: preload;
+    text-align: center;
+  }
+  .loadingBar {
+    grid-area: loadingBar;
+  }
+  .boxMove {
+    grid-area: boxMove;
+  }
