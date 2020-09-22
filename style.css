@@ -79,32 +79,3 @@ flex: 1;
     background-color: black;
     color: white;
 }
-.grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    align-items: center;
-    justify-items: center;
-    font-family: helvetica, arial, sans-serif;
-    color: white;
-    grid-template-areas:
-    "hover"
-    "disabled"
-    ;
-    height: 500px;
-  }
-  .hoverMe {
-    grid-area: hover;
-    background-color: blanchedalmond;
-    color: rgb(12, 7, 7);
-    width: 150px;
-    text-align: center; 
-    height: 50px;
-    transition: 0.3s;
-  
-  }
-  .hoverMe:hover {
-    background-color: #657351;
-    color: white;
-  
-  }
